@@ -299,5 +299,15 @@ public class Monster extends Actor implements Serializable {
 		return name + " - HP: " + getLifePoints() + " - Str: " + getStrength()
 				+ " - Def: " + getDefence() + " - Lvl: " + getLevel();
 	}
+	
+	//Method added to testing code
+	
+	@Override
+	public boolean equals(Object o){
+		if(!(o instanceof Monster)) return false;
+		
+		Monster m = (Monster)o;
+		return this.name.equals(m.getName());
+	}
 
 }

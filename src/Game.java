@@ -364,6 +364,10 @@ public class Game implements Serializable {
     	return this.seed;
     }
     
+    public Dungeon getD(){
+    	return this.d;
+    }
+    
     @Override
     public boolean equals(Object o){
 		if(!(o instanceof Game)) return false;
@@ -374,8 +378,8 @@ public class Game implements Serializable {
 			if(d[i] != this.arrayDungeon[i])
 				return false;
 		}
+	
 		
-    	return this.posDungeon == g.getPosDungeon() || this.sisterName.equals(g.getSisterName())||this.seed == g.getSeed()||this.a.equals(g.getAdventurer()); 
-    	//Dungeon, monster, rnd
+    	return this.posDungeon == g.getPosDungeon() || this.sisterName.equals(g.getSisterName())||this.seed == g.getSeed()||this.a.equals(g.getAdventurer())||this.d.equals(g.getD())||this.monsters.equals(g.getMonsters()); 
     }
 }
