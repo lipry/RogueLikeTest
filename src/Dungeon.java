@@ -774,5 +774,21 @@ class Room implements Serializable {
 		this.Walked = b;
 	}
 	
+	//Method added to testing code
+	
+	/*@Override
+	public boolean equals(Object o){
+		if(!(o instanceof Dungeon)) return false;
+		Dungeon d = (Dungeon) o;
+		Box[][] b = d.getBoxes();
+ 		for(int r=0; r<this.getWidth(); r++){
+			for(int c=0; c<this.getHeight(); c++){
+				if(this.boxes[r][c] != b[r][c])
+					return false;
+			}
+		}
+ 		
+ 		return this.seed 
+	}*/
 	
 }

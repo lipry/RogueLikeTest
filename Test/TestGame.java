@@ -6,8 +6,10 @@ import org.junit.Test;
 public class TestGame {
 
 	@Test
-	public void test() {
-		fail("Not yet implemented");
+	public void testGame(){
+		GameGUI Ggui = new GameGUI();
+		Game G = new Game(Ggui, "Tester");
+		
 	}
 
 }
