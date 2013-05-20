@@ -380,6 +380,8 @@ public class Game implements Serializable {
 		}
 	
 		
-    	return this.posDungeon == g.getPosDungeon() || this.sisterName.equals(g.getSisterName())||this.seed == g.getSeed()||this.a.equals(g.getAdventurer())||this.d.equals(g.getD())||this.monsters.equals(g.getMonsters()); 
+    	return this.posDungeon == g.getPosDungeon() || this.sisterName.equals(g.getSisterName())
+    		   ||this.seed == g.getSeed()||this.a.equals(g.getAdventurer())||this.d.equals(g.getD())
+    		   ||this.monsters.equals(g.getMonsters()); 
     }
 }
