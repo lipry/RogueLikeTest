@@ -8,3 +8,14 @@ Find Bug!
 -New Bug(seed:239925873693692928, Dungeon 4) Description:On the 2 dungeon (top, left to right) the top door on the middle doesnt have a corridor
 
 -New Bug(seed:239925873693692928) Description: When the item name is big the hotkeys are not correctly aligned.
+
+-New Bug - Description: There is no limit for the number of characters in the name of the player, so ... http://goo.gl/bfV4h
+
+-New Bug - Description: If I save the game, there is a game turn where mobs play but where I can't play (if I save the game 100 times for exemple in
+front of a mob at lvl 1 I die.
+
+-New Bug - Description: On a netbook, key are maybe not at the same place than a laptop keyboard so I can't use the "9" item. My "9" key is not recognized at all. However it's a "à"
+
+-New Bug - Description: If there is an object which fall on a potion you can't take the potion because you take the object. (Objects on the floor ar not stackable, certainly not a bug)
+
+-New Bug - Description: When you're at the end of the game, if you click on restart a game you keep the same statistics, objects, etc.
