@@ -437,11 +437,13 @@ public class Dungeon implements Serializable {
 		Box[][] b = d.getBoxes();
 	 	for(int r=0; r<Dungeon.SIZE_WIDTH; r++){
 			for(int c=0; c<Dungeon.SIZE_HEIGHT; c++){
-				if(this.boxes[r][c] != b[r][c])
+				if(this.boxes[r][c].equals(b[r][c]))
 					return false;
 			}
 		}
-	 	return this.seed == d.getSeed()||this.lastGenX == d.getLastGenX()||this.lastGenY == d.getLastGenY()||this.spawnX == d.getSpawnX()||this.spawnY == d.getSpawnY();
+	 	return this.seed == d.getSeed()||this.lastGenX == d.getLastGenX()
+	 		   ||this.lastGenY == d.getLastGenY()||this.spawnX == d.getSpawnX()
+	 		   ||this.spawnY == d.getSpawnY();
 	 	//Room
 	}
 	

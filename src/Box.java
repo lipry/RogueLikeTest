@@ -222,5 +222,12 @@ public class Box implements Serializable {
 			String res=new String(""+rep);
 			return res;
 		}
+		
+		//Method added to testing code
+//		public boolean equals(Object o){
+//			if(!(o instanceof Box)) return false;
+//			
+//			
+//		}
 }
 

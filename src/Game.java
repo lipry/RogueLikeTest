@@ -372,16 +372,18 @@ public class Game implements Serializable {
     public boolean equals(Object o){
 		if(!(o instanceof Game)) return false;
 		
+		//compare dungeons array
 		Game g = (Game) o;
 		Dungeon d[] = g.getArrayDungeon();
 		for(int i=0; i<d.length; i++){
-			if(d[i] != this.arrayDungeon[i])
+			if(!d[i].equals(this.arrayDungeon[i]))
 				return false;
 		}
-	
-		
+//	
+//		
     	return this.posDungeon == g.getPosDungeon() || this.sisterName.equals(g.getSisterName())
     		   ||this.seed == g.getSeed()||this.a.equals(g.getAdventurer())||this.d.equals(g.getD())
     		   ||this.monsters.equals(g.getMonsters()); 
+//    	return true;
     }
 }
