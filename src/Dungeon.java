@@ -421,7 +421,35 @@ public class Dungeon implements Serializable {
 		return res;
 	}
 	
+	//Method added to testing code
+	public int getLastGenX(){
+		return this.lastGenX;
+	}
+	
+	public int getLastGenY(){
+		return this.lastGenY;
+	}
+	
+	@Override
+	public boolean equals(Object o){
+		if(!(o instanceof Dungeon)) return false;
+		Dungeon d = (Dungeon) o;
+		Box[][] b = d.getBoxes();
+	 	for(int r=0; r<Dungeon.SIZE_WIDTH; r++){
+			for(int c=0; c<Dungeon.SIZE_HEIGHT; c++){
+				if(this.boxes[r][c] != b[r][c])
+					return false;
+			}
+		}
+	 	return this.seed == d.getSeed()||this.lastGenX == d.getLastGenX()||this.lastGenY == d.getLastGenY()||this.spawnX == d.getSpawnX()||this.spawnY == d.getSpawnY();
+	 	//Room
+	}
+	
 }
+
+
+
+
 
 class Room implements Serializable {
 
@@ -471,6 +499,7 @@ class Room implements Serializable {
 	 * Dongeon which containing the room
 	 */
 	private Dungeon d;
+
 	
 	// Constructors
 	public Room(int posX, int posY, int width, int height,Dungeon d) {
@@ -774,5 +803,25 @@ class Room implements Serializable {
 		this.Walked = b;
 	}
 	
+	
+	//Method added to testing code
+	public boolean getLinked(){
+		return this.linked;
+	}
+	
+	public int getNumber(){
+		return this.number;
+	}
+	
+	public Dungeon getD(){
+		return this.d;
+	}
+	
+	@Override
+	public boolean equals(Object o){
+		if(!(o instanceof Room)) return false;
+		Room r = (Room) o;
+		return this.posX == r.getPosX()|| this.posX == r.getPosX()||this.Walked == r.getWalked()|| this.width == r.getWidth() || this.height == r.getWidth()|| this.linked == r.getLinked()||this.number == r.getNumber()||this.getD().equals(r.getD());
+	}
 	
 }

@@ -9,7 +9,7 @@ import java.io.*;
  *
  */
 
-//Try git
+
 @SuppressWarnings("serial")
 public class Game implements Serializable {
 
@@ -48,6 +48,8 @@ public class Game implements Serializable {
     	this.view = view;
     	this.sisterName=this.girlsName[(int) (Math.random()*(girlsName.length*1.0))];
     }
+    
+    
     
     public Game(GameGUI view,String playername,long seed) {
     	this.seed = seed;
@@ -357,4 +359,29 @@ public class Game implements Serializable {
     	return monsters;
     }
     
+    //Method added to testing code
+    public Long getSeed(){
+    	return this.seed;
+    }
+    
+    public Dungeon getD(){
+    	return this.d;
+    }
+    
+    @Override
+    public boolean equals(Object o){
+		if(!(o instanceof Game)) return false;
+		
+		Game g = (Game) o;
+		Dungeon d[] = g.getArrayDungeon();
+		for(int i=0; i<d.length; i++){
+			if(d[i] != this.arrayDungeon[i])
+				return false;
+		}
+	
+		
+    	return this.posDungeon == g.getPosDungeon() || this.sisterName.equals(g.getSisterName())
+    		   ||this.seed == g.getSeed()||this.a.equals(g.getAdventurer())||this.d.equals(g.getD())
+    		   ||this.monsters.equals(g.getMonsters()); 
+    }
 }

@@ -41,5 +41,14 @@ public class Equipment extends Item implements Serializable {
 				+ this.getModDef() + ")";
 
 	}
+	
+	 //Method added to testing code
+	
+	@Override
+	public boolean equals(Object o){
+		if(!(o instanceof Equipment)) return false;
+		Equipment e = (Equipment) o;
+		return this.toString().equals(e.toString());
+	}
 
 }

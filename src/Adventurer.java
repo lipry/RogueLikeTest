@@ -486,4 +486,32 @@ public class Adventurer extends Actor implements Serializable {
 	public String toString(){
 		return "Name: "+ name+ " - HP: "+getLifePoints()+"/"+maxLifePoints+" - Str: "+getStrength()+" - Def: "+getDefence()+" - Exp: "+getExp()+"/"+expToNextLevel+" - Lvl: "+getLevel();
 	}
+	
+	//Method added to testing code
+	public boolean getKey(){
+		return this.key;
+	}
+	
+	public Vector<Item> getHealthPotion(){
+		return this.healthPotion;
+	}
+	
+	public Vector<Item> getInventory(){
+		return this.inventory; 
+	}
+	
+	public Equipment getArmor(){
+		return Armor; 
+	}
+	
+	public Equipment getWeapon(){
+		return this.Weapon; 
+	}
+	
+	@Override
+	public boolean equals(Object o){
+		if(!(o instanceof Adventurer)) return false;
+		Adventurer a = (Adventurer) o;
+		return this.name.equals(a.getName())||this.expToNextLevel == a.expToNextLevel||this.maxLifePoints == a.maxLifePoints ||this.key == a.getKey() || this.healthPotion.equals(a.getHealthPotion())||this.inventory.equals(a.getInventory())||this.Armor.equals(a.getArmor())|| this.Weapon.equals(a.getWeapon());
+	}
 }
