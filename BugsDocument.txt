@@ -1,1 +1,6 @@
-Bug!
+Find Bug!
+
+-New Bug(seed:239925873693692928, Dungeon 4) Description:On the 2 dungeon (top, left to right) the top door on the middle doesnt have a corridor
+
+-New Bug(seed:239925873693692928) Description: When the item name is big the hotkeys are not correctly aligned.
+
